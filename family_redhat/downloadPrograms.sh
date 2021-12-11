@@ -29,7 +29,6 @@ wget -c "$VIRTUAL_BOX_RPM"   -P "$DIRETORIO_DOWNLOADS"
 
 ## Instalando pacotes .deb baixados na sessão anterior ##
 sudo yum install $DIRETORIO_DOWNLOADS/*.rmp -y
-sudo yum install DIRETORIO_DOWNLOADS/*.rpm -y
 ## ------------------------------------------- ##
 
 ## Instalando Pacotes Flatpak ##
