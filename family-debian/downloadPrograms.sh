@@ -1,10 +1,10 @@
 #!/bin/bash
-# ---------------------------------------- VARIÁVEIS ---------------------------------------- #
+## VARIÁVEIS ##
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_4K_VIDEO_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.15.1-1_amd64.deb"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
-# ------------------------------------------------------------------------------------------- #
+## ---------- ##
 
 ## Atualizando o repositório ##
 sudo apt update -y
@@ -20,7 +20,7 @@ sudo apt install virtualbox -y
 sudo apt install gnome-boxes -y
 sudo apt install gnome-tweaks -y
 sudo apt install gnome-characters -y
-## ------------------------------------------- ##
+## -------------------------------- ##
 
 ## Download e instalação de programas externos ##
 mkdir "$DIRETORIO_DOWNLOADS"
