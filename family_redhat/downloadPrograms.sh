@@ -41,6 +41,7 @@ flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.valvesoftware.Steam -y
 flatpak install flathub com.github.calo001.fondo -y
 flatpak install flathub de.haeckerfelix.Fragments -y
+flatpak install flathub com.github.unrud.VideoDownloader -y
 #Para verificar quais apps Flatpak instaldos usar o comando: flatpak list#
 ## -------------------------- ##
 

@@ -1,7 +1,6 @@
 #!/bin/bash
 ## VARIÁVEIS ##
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-URL_4K_VIDEO_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.15.1-1_amd64.deb"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 ## ---------- ##
@@ -41,6 +40,7 @@ flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.valvesoftware.Steam -y
 flatpak install flathub com.github.calo001.fondo -y
 flatpak install flathub de.haeckerfelix.Fragments -y
+flatpak install flathub com.github.unrud.VideoDownloader -y
 #Para verificar quais apps Flatpak instaldos usar o comando: flatpak list#
 ## ----------------------- ##
 
