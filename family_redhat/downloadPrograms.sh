@@ -8,17 +8,17 @@ DIRETORIO_DOWNLOADS="$HOME/Downloads/programs"
 ## ---------- ##
 
 ## Atualizando o repositório ##
-sudo yum update -y
-sudo yum upgrade -y
+sudo dnf update -y
+sudo dnf upgrade -y
 ## ------------------------- ##
 
 ## Instalação de programas internos ##
-sudo yum install flatpak -y
-sudo yum install audacity -y
-sudo yum install flameshot -y
-sudo yum install gnome-boxes -y
-sudo yum install gnome-tweaks -y
-sudo yum install gnome-characters -y
+sudo dnf install flatpak -y
+sudo dnf install audacity -y
+sudo dnf install flameshot -y
+sudo dnf install gnome-boxes -y
+sudo dnf install gnome-tweaks -y
+sudo dnf install gnome-characters -y
 ## -------------------------------- ##
 
 ## Download e instalação de programas externos ##
@@ -28,26 +28,30 @@ wget -c "$VISUAL_STUDIO_RPM" -P "$DIRETORIO_DOWNLOADS"
 wget -c "$VIRTUAL_BOX_RPM"   -P "$DIRETORIO_DOWNLOADS"
 
 ## Instalando pacotes .deb baixados na sessão anterior ##
-sudo yum install $DIRETORIO_DOWNLOADS/* -y
+sudo dnf install $DIRETORIO_DOWNLOADS/* -y
 ## ------------------------------------------- ##
 
 ## Instalando Pacotes Flatpak ##
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub net.pcsx2.PCSX2 -y
 flatpak install flathub org.videolan.VLC -y
-flatpak install flathub com.getferdi.Ferdi -y
 flatpak install flathub com.spotify.Client -y
 flatpak install flathub org.telegram.desktop -y
+flatpak install flathub com.bitwarden.desktop -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.valvesoftware.Steam -y
 flatpak install flathub com.github.calo001.fondo -y
 flatpak install flathub de.haeckerfelix.Fragments -y
+flatpak install flathub com.heroicgameslauncher.hgl -y
+flatpak install flathub com.mattjakeman.ExtensionManager -y
 flatpak install flathub com.github.unrud.VideoDownloader -y
+flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y
 #Para verificar quais apps Flatpak instaldos usar o comando: flatpak list#
 ## -------------------------- ##
 
 ## Finalização, atualização e limpeza ##
-sudo yum update -y
-sudo yum upgrade -y
-sudo yum autoremove -y
-sudo yum clean all -y
+sudo dnf update -y
+sudo dnf upgrade -y
+sudo dnf autoremove -y
+sudo dnf clean all -y
 ## ---------------------------------- ##

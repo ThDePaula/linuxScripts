@@ -1,7 +1,8 @@
 #!/bin/bash
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get dist-upgrade -y
-sudo apt-get install -y
-sudo apt-get autoremove -y
-sudo apt-get autoclean -y
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt dist-upgrade -y
+sudo apt install -y
+sudo apt autoremove -y
+sudo apt autoclean -y
+flatpak update -y
