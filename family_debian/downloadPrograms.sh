@@ -1,7 +1,8 @@
 #!/bin/bash
 ## VARIÁVEIS ##
-URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-URL_4K_VIDEO_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.21.1-1_amd64.deb?source=website"
+GOOGLE_CHROME_DEB="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+VISUAL_STUDIO_DEB="https://az764295.vo.msecnd.net/stable/da76f93349a72022ca4670c1b84860304616aaa2/code_1.70.0-1659589288_amd64.deb"
+VIDEO_DOWNLOADER_DEB="https://dl.4kdownload.com/app/4kvideodownloader_4.21.1-1_amd64.deb?source=website"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 ## ---------- ##
@@ -25,8 +26,9 @@ sudo apt install gnome-shell-extensions -y
 
 ## Download e instalação de programas externos ##
 mkdir "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_4K_VIDEO_DOWNLOADER" -P "$DIRETORIO_DOWNLOADS"
+wget -c "$GOOGLE_CHROME_DEB" -P "$DIRETORIO_DOWNLOADS"
+wget -c "$VISUAL_STUDIO_DEB" -P "$DIRETORIO_DOWNLOADS"
+wget -c "$VIDEO_DOWNLOADER_DEB" -P "$DIRETORIO_DOWNLOADS"
 
 ## Instalando pacotes .deb baixados na sessão anterior ##
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb

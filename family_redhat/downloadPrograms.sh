@@ -1,8 +1,7 @@
 #!/bin/bash
 ## VARIÁVEIS ##
 GOOGLE_CHROME_RPM="https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
-VISUAL_STUDIO_RPM="https://az764295.vo.msecnd.net/stable/7db1a2b88f7557e0a43fec75b6ba7e50b3e9f77e/code-1.63.0-1638855621.el7.x86_64.rpm"
-VIRTUAL_BOX_RPM="https://download.virtualbox.org/virtualbox/6.1.30/VirtualBox-6.1-6.1.30_148432_fedora33-1.x86_64.rpm"
+VISUAL_STUDIO_RPM="https://az764295.vo.msecnd.net/stable/da76f93349a72022ca4670c1b84860304616aaa2/code-1.70.0-1659589373.el7.x86_64.rpm"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programs"
 ## ---------- ##
@@ -25,7 +24,6 @@ sudo dnf install gnome-characters -y
 mkdir "$DIRETORIO_DOWNLOADS"
 wget -c "$GOOGLE_CHROME_RPM" -P "$DIRETORIO_DOWNLOADS"
 wget -c "$VISUAL_STUDIO_RPM" -P "$DIRETORIO_DOWNLOADS"
-wget -c "$VIRTUAL_BOX_RPM"   -P "$DIRETORIO_DOWNLOADS"
 
 ## Instalando pacotes .deb baixados na sessão anterior ##
 sudo dnf install $DIRETORIO_DOWNLOADS/* -y
