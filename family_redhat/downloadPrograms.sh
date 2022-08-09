@@ -3,7 +3,10 @@
 GOOGLE_CHROME_RPM="https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 VISUAL_STUDIO_RPM="https://az764295.vo.msecnd.net/stable/da76f93349a72022ca4670c1b84860304616aaa2/code-1.70.0-1659589373.el7.x86_64.rpm"
 
-DIRETORIO_DOWNLOADS="$HOME/Downloads/programs"
+DIRETORIO_DOWNLOADS="$HOME/Downloads/⏬Programs"
+DIRETORIO_DOWNLOADS_ISO="$HOME/Downloads/📀ISO"
+DIRETORIO_PROJECTS="$HOME/Documents/📌Projects"
+DIRETORIO_CONNECTION="$HOME/Public/🐧Connection"
 ## ---------- ##
 
 ## Atualizando o repositório ##
@@ -20,8 +23,14 @@ sudo dnf install gnome-tweaks -y
 sudo dnf install gnome-characters -y
 ## -------------------------------- ##
 
-## Download e instalação de programas externos ##
+## Criando Pastas ##
 mkdir "$DIRETORIO_DOWNLOADS"
+mkdir "$DIRETORIO_DOWNLOADS_ISO"
+mkdir "$DIRETORIO_PROJECTS"
+mkdir "$DIRETORIO_CONNECTION"
+## -------------- ##
+
+## Download de programas externos ##
 wget -c "$GOOGLE_CHROME_RPM" -P "$DIRETORIO_DOWNLOADS"
 wget -c "$VISUAL_STUDIO_RPM" -P "$DIRETORIO_DOWNLOADS"
 

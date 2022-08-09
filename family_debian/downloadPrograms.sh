@@ -4,7 +4,10 @@ GOOGLE_CHROME_DEB="https://dl.google.com/linux/direct/google-chrome-stable_curre
 VISUAL_STUDIO_DEB="https://az764295.vo.msecnd.net/stable/da76f93349a72022ca4670c1b84860304616aaa2/code_1.70.0-1659589288_amd64.deb"
 VIDEO_DOWNLOADER_DEB="https://dl.4kdownload.com/app/4kvideodownloader_4.21.1-1_amd64.deb?source=website"
 
-DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
+DIRETORIO_DOWNLOADS="$HOME/Downloads/⏬Programs"
+DIRETORIO_DOWNLOADS_ISO="$HOME/Downloads/📀ISO"
+DIRETORIO_PROJECTS="$HOME/Documents/📌Projects"
+DIRETORIO_CONNECTION="$HOME/Public/🐧Connection"
 ## ---------- ##
 
 ## Atualizando o repositório ##
@@ -24,8 +27,14 @@ sudo apt install gnome-characters -y
 sudo apt install gnome-shell-extensions -y
 ## -------------------------------- ##
 
-## Download e instalação de programas externos ##
+## Criando Pastas ##
 mkdir "$DIRETORIO_DOWNLOADS"
+mkdir "$DIRETORIO_DOWNLOADS_ISO"
+mkdir "$DIRETORIO_PROJECTS"
+mkdir "$DIRETORIO_CONNECTION"
+## -------------- ##
+
+## Download de programas externos ##
 wget -c "$GOOGLE_CHROME_DEB" -P "$DIRETORIO_DOWNLOADS"
 wget -c "$VISUAL_STUDIO_DEB" -P "$DIRETORIO_DOWNLOADS"
 wget -c "$VIDEO_DOWNLOADER_DEB" -P "$DIRETORIO_DOWNLOADS"
