@@ -1,6 +1,7 @@
 #!/bin/bash
 ## VARIÁVEIS ##
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+URL_4K_VIDEO_DOWNLOADER="https://dl.4kdownload.com/app/4kvideodownloader_4.21.1-1_amd64.deb?source=website"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 ## ---------- ##
