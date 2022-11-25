@@ -72,8 +72,8 @@ apt_unlocking(){
 
 dpkg_reconfig(){
     dpkg --configure -a
-    apt autoremove
-    apt -f install
+    apt autoremove -y
+    apt -f install -y
 }
 
 
@@ -81,6 +81,7 @@ dpkg_reconfig(){
 ## Execução de Script ##
 # Resolve problemas de travas no APT e DPKG
 apt_unlocking
+apt_update
 dpkg_reconfig
 
 # Adiciona Repositórios
