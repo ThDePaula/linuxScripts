@@ -21,7 +21,6 @@ apt_remove(){
 }
 
 apt_install(){
-    apt install code -y
     apt install flatpak -y
     apt install audacity -y
     apt install flameshot -y 
@@ -66,7 +65,24 @@ flatpak_install(){
     flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y
 }
 
+apt_unlocking(){
+    rm /var/lib/apt/lists/lock
+    rm /var/lib/dpkg/lock
+}
+
+dpkg_reconfig(){
+    dpkg --configure -a
+    apt autoremove
+    apt -f install
+}
+
+
+
 ## Execução de Script ##
+# Resolve problemas de travas no APT e DPKG
+apt_unlocking
+dpkg_reconfig
+
 # Adiciona Repositórios
 add_repo
 
