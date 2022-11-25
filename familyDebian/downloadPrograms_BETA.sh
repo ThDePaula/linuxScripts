@@ -1,5 +1,10 @@
 #!/bin/bash
 ## Variáveis ##
+GREEN_BOLD='\033[1;32m'
+YELLOW_BOLD='\033[1;33m'
+BLUE_BOLD='\033[1;34m'
+NO_COLOR='\e[0m'
+
 GOOGLE_CHROME_DEB="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 VISUAL_STUDIO_DEB="https://az764295.vo.msecnd.net/stable/da76f93349a72022ca4670c1b84860304616aaa2/code_1.70.0-1659589288_amd64.deb"
 VIDEO_DOWNLOADER_DEB="https://dl.4kdownload.com/app/4kvideodownloader_4.21.1-1_amd64.deb?source=website"
@@ -11,16 +16,22 @@ DIRETORIO_CONNECTION="$HOME/Public/Connection"
 
 ## Funções ##
 apt_update(){
+    echo -e "${BLUE_BOLD}[INFO] - System Update ${NO_COLOR}"
+
     apt update -y
     apt upgrade -y
 }
 
 apt_remove(){
+    echo -e "${YELLOW_BOLD}[INFO] - Remove Legacy Packages ${NO_COLOR}"
+
     apt autoremove -y
     apt autoclean -y
 }
 
 apt_install(){
+    echo -e "${BLUE_BOLD}[INFO] - Install Packages ${NO_COLOR}"
+
     apt install flatpak -y
     apt install audacity -y
     apt install flameshot -y 
@@ -36,6 +47,8 @@ add_repo(){
 }
 
 create_folder(){
+    echo -e "${YELLOW_BOLD}[INFO] - Create Folders  ${NO_COLOR}"
+
     mkdir "$DIRETORIO_DOWNLOADS"
     mkdir "$DIRETORIO_DOWNLOADS_ISO"
     mkdir "$DIRETORIO_PROJECTS"
@@ -43,6 +56,10 @@ create_folder(){
 }
 
 package_deb(){
+    echo -e "${BLUE_BOLD}[INFO] - Install Packages .DEB ${NO_COLOR}"
+
+    wget -c "$GOOGLE_CHROME_DEB" -P "$DIRETORIO_DOWNLOADS"
+    apt -f install -y
     wget -c "$GOOGLE_CHROME_DEB" -P "$DIRETORIO_DOWNLOADS"
     wget -c "$VISUAL_STUDIO_DEB" -P "$DIRETORIO_DOWNLOADS"
     wget -c "$VIDEO_DOWNLOADER_DEB" -P "$DIRETORIO_DOWNLOADS"
@@ -51,6 +68,8 @@ package_deb(){
 }
 
 flatpak_install(){
+    echo -e "${BLUE_BOLD}[INFO] - Install Packages Flatpak ${NO_COLOR}"
+    
     flatpak install flathub net.pcsx2.PCSX2 -y
     flatpak install flathub org.videolan.VLC -y
     flatpak install flathub com.spotify.Client -y
@@ -66,11 +85,15 @@ flatpak_install(){
 }
 
 apt_unlocking(){
+    echo -e "${YELLOW_BOLD}[INFO] - Unlocking in APT  ${NO_COLOR}"
+
     rm /var/lib/apt/lists/lock
     rm /var/lib/dpkg/lock
 }
 
 dpkg_reconfig(){
+    echo -e "${YELLOW_BOLD}[INFO] - Reconfig DPKG and APT  ${NO_COLOR}"
+
     dpkg --configure -a
     apt autoremove -y
     apt -f install -y
@@ -98,3 +121,5 @@ package_deb
 
 # Remove dependência legada
 apt_remove
+
+echo -e "${GREEN_BOLD}[INFO] - Finished Execute!!! ${NO_COLOR}"
