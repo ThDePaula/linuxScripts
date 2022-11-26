@@ -59,7 +59,6 @@ package_deb(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages .DEB ${NO_COLOR}"
 
     wget -c "$GOOGLE_CHROME_DEB" -P "$DIRETORIO_DOWNLOADS"
-    apt -f install -y
     wget -c "$GOOGLE_CHROME_DEB" -P "$DIRETORIO_DOWNLOADS"
     wget -c "$VISUAL_STUDIO_DEB" -P "$DIRETORIO_DOWNLOADS"
     wget -c "$VIDEO_DOWNLOADER_DEB" -P "$DIRETORIO_DOWNLOADS"
