@@ -107,14 +107,12 @@ apt_unlocking
 apt_update
 dpkg_reconfig
 
-# Adiciona Repositórios
-add_repo
-
 # Atualiza repositórios
 apt_update
 
 # Instala Programas
 apt_install
+add_repo # Adiciona Repositórios
 flatpak_install
 create_folder
 package_deb
