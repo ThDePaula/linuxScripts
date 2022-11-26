@@ -60,7 +60,6 @@ package_deb(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages .DEB ${NO_COLOR}"
 
     wget -c "$GOOGLE_CHROME_DEB" -P "$DIRETORIO_DOWNLOADS"
-    wget -c "$GOOGLE_CHROME_DEB" -P "$DIRETORIO_DOWNLOADS"
     wget -c "$VISUAL_STUDIO_DEB" -P "$DIRETORIO_DOWNLOADS"
     wget -c "$VIDEO_DOWNLOADER_DEB" -P "$DIRETORIO_DOWNLOADS"
 
@@ -70,7 +69,6 @@ package_deb(){
 flatpak_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages Flatpak ${NO_COLOR}"
     
-    flatpak install flathub net.pcsx2.PCSX2 -y
     flatpak install flathub org.videolan.VLC -y
     flatpak install flathub com.spotify.Client -y
     flatpak install flathub org.telegram.desktop -y
@@ -102,22 +100,18 @@ dpkg_reconfig(){
 
 
 ## Execução de Script ##
-# Resolve problemas de travas no APT e DPKG
 apt_unlocking
 apt_update
 dpkg_reconfig
 
-# Atualiza repositórios
 apt_update
 
-# Instala Programas
 apt_install
-add_repo # Adiciona Repositórios
+add_repo
 flatpak_install
 create_folder
 package_deb
 
-# Remove dependência legada
 apt_remove
 
 echo -e "${GREEN_BOLD}[INFO] - Finished Execute!!! ${NO_COLOR}"
