@@ -40,6 +40,7 @@ apt_install(){
     apt install gnome-tweaks -y
     apt install gnome-characters -y
     apt install gnome-shell-extensions -y
+    apt install gnome-software-plugin-flatpak -y
 }
 
 add_repo(){
