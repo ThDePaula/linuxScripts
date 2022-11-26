@@ -7,7 +7,6 @@ NO_COLOR='\e[0m'
 
 GOOGLE_CHROME_DEB="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 VISUAL_STUDIO_DEB="https://az764295.vo.msecnd.net/stable/da76f93349a72022ca4670c1b84860304616aaa2/code_1.70.0-1659589288_amd64.deb"
-VIDEO_DOWNLOADER_DEB="https://dl.4kdownload.com/app/4kvideodownloader_4.21.1-1_amd64.deb?source=website"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/Programs"
 DIRETORIO_DOWNLOADS_ISO="$HOME/Downloads/ISO"
@@ -61,7 +60,6 @@ package_deb(){
 
     wget -c "$GOOGLE_CHROME_DEB" -P "$DIRETORIO_DOWNLOADS"
     wget -c "$VISUAL_STUDIO_DEB" -P "$DIRETORIO_DOWNLOADS"
-    wget -c "$VIDEO_DOWNLOADER_DEB" -P "$DIRETORIO_DOWNLOADS"
 
     dpkg -i $DIRETORIO_DOWNLOADS/*.deb
 }
