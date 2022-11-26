@@ -5,4 +5,5 @@ Este repositório reuni soluções automatizadas que servem para situações cot
 Os scripts são baseados nas bases principais, porém, foi testado nas seguintes distros:
 
 - Ubuntu
+- PopOs
 - Fedora
