@@ -6,7 +6,7 @@ BLUE_BOLD='\033[1;34m'
 NO_COLOR='\e[0m'
 
 GOOGLE_CHROME_DEB="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-VISUAL_STUDIO_DEB="https://az764295.vo.msecnd.net/stable/da76f93349a72022ca4670c1b84860304616aaa2/code_1.70.0-1659589288_amd64.deb"
+VS_CODE_DEB="https://az764295.vo.msecnd.net/stable/da76f93349a72022ca4670c1b84860304616aaa2/code_1.70.0-1659589288_amd64.deb"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/Programs"
 DIRETORIO_DOWNLOADS_ISO="$HOME/Downloads/ISO"
@@ -59,7 +59,7 @@ package_deb(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages .DEB ${NO_COLOR}"
 
     wget -c "$GOOGLE_CHROME_DEB" -P "$DIRETORIO_DOWNLOADS"
-    wget -c "$VISUAL_STUDIO_DEB" -P "$DIRETORIO_DOWNLOADS"
+    wget -c "$VS_CODE_DEB" -P "$DIRETORIO_DOWNLOADS"
 
     dpkg -i $DIRETORIO_DOWNLOADS/*.deb
 }
@@ -97,7 +97,7 @@ dpkg_reconfig(){
 
 
 
-## Execução de Script ##
+## Execução do Script ##
 apt_unlocking
 apt_update
 dpkg_reconfig
