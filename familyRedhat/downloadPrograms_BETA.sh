@@ -19,6 +19,7 @@ dnf_update(){
 
     dnf update -y
     dnf upgrade -y
+    flatpak update -y
 }
 
 dnf_remove(){
@@ -40,6 +41,7 @@ dnf_install(){
 }
 
 add_repo(){
+    flatpak remote-delete fedora
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 }
 
@@ -78,10 +80,10 @@ flatpak_install(){
 }
 
 ## Execução do Script
+add_repo
 dnf_update
 
 dnf_install
-add_repo
 flatpak_install
 create_folder
 package_rpm
