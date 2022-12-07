@@ -110,6 +110,7 @@ flatpak_install
 create_folder
 package_deb
 
+apt_update
 apt_remove
 
 echo -e "${GREEN_BOLD}[INFO] - Finished Execute!!! ${NO_COLOR}"

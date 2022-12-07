@@ -80,14 +80,15 @@ flatpak_install(){
 }
 
 ## Execução do Script
-add_repo
 dnf_update
 
 dnf_install
+add_repo
 flatpak_install
 create_folder
 package_rpm
 
+dnf_update
 dnf_remove
 
 echo -e "${GREEN_BOLD}[INFO] - Finished Execute!!! ${NO_COLOR}"
