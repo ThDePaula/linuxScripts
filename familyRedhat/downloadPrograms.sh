@@ -60,7 +60,7 @@ package_rpm(){
     wget -c "$GOOGLE_CHROME_RPM" -P "$DIRETORIO_DOWNLOADS"
     wget -c "$VS_CODE_RPM" -P "$DIRETORIO_DOWNLOADS"
 
-    dpkg -i $DIRETORIO_DOWNLOADS/*.rpm
+    rpm -i $DIRETORIO_DOWNLOADS/*.rpm
 }
 
 flatpak_install(){
