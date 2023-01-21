@@ -67,7 +67,6 @@ flatpak_install(){
     flatpak install flathub org.videolan.VLC -y
     flatpak install flathub com.spotify.Client -y
     flatpak install flathub org.telegram.desktop -y
-    flatpak install flathub com.bitwarden.desktop -y
     flatpak install flathub com.discordapp.Discord -y
     flatpak install flathub com.valvesoftware.Steam -y
     flatpak install flathub de.haeckerfelix.Fragments -y
