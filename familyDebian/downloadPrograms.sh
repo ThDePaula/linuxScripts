@@ -41,7 +41,7 @@ apt_install(){
 }
 
 add_repo(){
-    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 }
 
 create_folder(){
@@ -81,8 +81,8 @@ flatpak_install(){
 apt_unlocking(){
     echo -e "${YELLOW_BOLD}[INFO] - Unlocking in APT  ${NO_COLOR}"
 
-    sudo rm /var/lib/apt/lists/lock
-    sudo rm /var/lib/dpkg/lock
+    sudo rm -rf /var/lib/apt/lists/lock
+    sudo rm -rf /var/lib/dpkg/lock
 }
 
 dpkg_reconfig(){

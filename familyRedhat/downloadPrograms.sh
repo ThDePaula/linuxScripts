@@ -39,8 +39,8 @@ dnf_install(){
 }
 
 add_repo(){
-    flatpak remote-delete fedora
-    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    sudo flatpak remote-delete fedora
+    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 }
 
 create_folder(){
