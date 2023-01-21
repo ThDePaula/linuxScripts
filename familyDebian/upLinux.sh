@@ -7,16 +7,16 @@ NO_COLOR='\e[0m'
 apt_update(){
     echo -e "${BLUE_BOLD}[INFO] - System Update ${NO_COLOR}"
     
-    apt update -y
-    apt upgrade -y
+    sudo apt update -y
+    sudo apt upgrade -y
     flatpak update -y
 }
 
 apt_remove(){
     echo -e "${YELLOW_BOLD}[INFO] - Remove Legacy Packages ${NO_COLOR}"
 
-    apt autoremove -y
-    apt autoclean -y
+    sudo apt autoremove -y
+    sudo apt autoclean -y
 }
 
 apt_update

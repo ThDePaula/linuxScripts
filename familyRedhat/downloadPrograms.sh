@@ -1,5 +1,4 @@
 #!/bin/bash
-## Variáveis ##
 GREEN_BOLD='\033[1;32m'
 YELLOW_BOLD='\033[1;33m'
 BLUE_BOLD='\033[1;34m'
@@ -13,36 +12,35 @@ DIRETORIO_DOWNLOADS_ISO="$HOME/Downloads/ISO"
 DIRETORIO_PROJECTS="$HOME/Documents/Projects"
 DIRETORIO_CONNECTION="$HOME/Public/Connection"
 
-## Funções ##
 dnf_update(){
     echo -e "${BLUE_BOLD}[INFO] - System Update ${NO_COLOR}"
 
-    dnf update -y
-    dnf upgrade -y
+    sudo dnf update -y
+    sudo dnf upgrade -y
     flatpak update -y
 }
 
 dnf_remove(){
     echo -e "${YELLOW_BOLD}[INFO] - Remove Legacy Packages ${NO_COLOR}"
 
-    dnf autoremove -y
-    dnf clean all -y
+    sudo dnf autoremove -y
+    sudo dnf clean all -y
 }
 
 dnf_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages ${NO_COLOR}"
 
-    dnf install flatpak -y
-    dnf install audacity -y
-    dnf install flameshot -y
-    dnf install gnome-boxes -y
-    dnf install gnome-tweaks -y
-    dnf install gnome-characters -y
+    sudo dnf install flatpak -y
+    sudo dnf install audacity -y
+    sudo dnf install flameshot -y
+    sudo dnf install gnome-boxes -y
+    sudo dnf install gnome-tweaks -y
+    sudo dnf install gnome-characters -y
 }
 
 add_repo(){
-    flatpak remote-delete fedora
-    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    sudo flatpak remote-delete fedora
+    sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 }
 
 create_folder(){
@@ -55,12 +53,12 @@ create_folder(){
 }
 
 package_rpm(){
-    echo -e "${BLUE_BOLD}[INFO] - Install Packages .DEB ${NO_COLOR}"
+    echo -e "${BLUE_BOLD}[INFO] - Install Packages .RPM ${NO_COLOR}"
 
     wget -c "$GOOGLE_CHROME_RPM" -P "$DIRETORIO_DOWNLOADS"
     wget -c "$VS_CODE_RPM" -P "$DIRETORIO_DOWNLOADS"
 
-    dpkg -i $DIRETORIO_DOWNLOADS/*.rpm
+    rpm -i $DIRETORIO_DOWNLOADS/*.rpm
 }
 
 flatpak_install(){
@@ -69,7 +67,6 @@ flatpak_install(){
     flatpak install flathub org.videolan.VLC -y
     flatpak install flathub com.spotify.Client -y
     flatpak install flathub org.telegram.desktop -y
-    flatpak install flathub com.bitwarden.desktop -y
     flatpak install flathub com.discordapp.Discord -y
     flatpak install flathub com.valvesoftware.Steam -y
     flatpak install flathub de.haeckerfelix.Fragments -y
@@ -79,7 +76,6 @@ flatpak_install(){
     flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y
 }
 
-## Execução do Script
 dnf_update
 
 dnf_install
