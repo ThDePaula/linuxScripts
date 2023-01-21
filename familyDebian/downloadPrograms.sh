@@ -15,29 +15,29 @@ DIRETORIO_CONNECTION="$HOME/Public/Connection"
 apt_update(){
     echo -e "${BLUE_BOLD}[INFO] - System Update ${NO_COLOR}"
 
-    apt update -y
-    apt upgrade -y
+    sudo apt update -y
+    sudo apt upgrade -y
 }
 
 apt_remove(){
     echo -e "${YELLOW_BOLD}[INFO] - Remove Legacy Packages ${NO_COLOR}"
 
-    apt autoremove -y
-    apt autoclean -y
+    sudo apt autoremove -y
+    sudo apt autoclean -y
 }
 
 apt_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages ${NO_COLOR}"
 
-    apt install flatpak -y
-    apt install audacity -y
-    apt install flameshot -y 
-    apt install virtualbox -y
-    apt install gnome-boxes -y
-    apt install gnome-tweaks -y
-    apt install gnome-characters -y
-    apt install gnome-shell-extensions -y
-    apt install gnome-software-plugin-flatpak -y
+    sudo apt install flatpak -y
+    sudo apt install audacity -y
+    sudo apt install flameshot -y 
+    sudo apt install virtualbox -y
+    sudo apt install gnome-boxes -y
+    sudo apt install gnome-tweaks -y
+    sudo apt install gnome-characters -y
+    sudo apt install gnome-shell-extensions -y
+    sudo apt install gnome-software-plugin-flatpak -y
 }
 
 add_repo(){
@@ -81,16 +81,16 @@ flatpak_install(){
 apt_unlocking(){
     echo -e "${YELLOW_BOLD}[INFO] - Unlocking in APT  ${NO_COLOR}"
 
-    rm /var/lib/apt/lists/lock
-    rm /var/lib/dpkg/lock
+    sudo rm /var/lib/apt/lists/lock
+    sudo rm /var/lib/dpkg/lock
 }
 
 dpkg_reconfig(){
     echo -e "${YELLOW_BOLD}[INFO] - Reconfig DPKG and APT  ${NO_COLOR}"
 
-    dpkg --configure -a
-    apt autoremove -y
-    apt -f install -y
+    sudo dpkg --configure -a
+    sudo apt autoremove -y
+    sudo apt -f install -y
 }
 
 apt_unlocking

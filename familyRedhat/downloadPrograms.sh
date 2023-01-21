@@ -15,27 +15,27 @@ DIRETORIO_CONNECTION="$HOME/Public/Connection"
 dnf_update(){
     echo -e "${BLUE_BOLD}[INFO] - System Update ${NO_COLOR}"
 
-    dnf update -y
-    dnf upgrade -y
+    sudo dnf update -y
+    sudo dnf upgrade -y
     flatpak update -y
 }
 
 dnf_remove(){
     echo -e "${YELLOW_BOLD}[INFO] - Remove Legacy Packages ${NO_COLOR}"
 
-    dnf autoremove -y
-    dnf clean all -y
+    sudo dnf autoremove -y
+    sudo dnf clean all -y
 }
 
 dnf_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages ${NO_COLOR}"
 
-    dnf install flatpak -y
-    dnf install audacity -y
-    dnf install flameshot -y
-    dnf install gnome-boxes -y
-    dnf install gnome-tweaks -y
-    dnf install gnome-characters -y
+    sudo dnf install flatpak -y
+    sudo dnf install audacity -y
+    sudo dnf install flameshot -y
+    sudo dnf install gnome-boxes -y
+    sudo dnf install gnome-tweaks -y
+    sudo dnf install gnome-characters -y
 }
 
 add_repo(){
