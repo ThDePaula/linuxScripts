@@ -9,5 +9,5 @@ sudo chmod +x /bin/{nome-script}
 ```
 Para executar o script:
 ```
-sudo /bin/{nome-script}
+sudo su -s /bin/{nome-script} $USER
 ```
