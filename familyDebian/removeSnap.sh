@@ -1,11 +1,9 @@
 #!/bin/bash
-## Variáveis ##
 GREEN_BOLD='\033[1;32m'
 YELLOW_BOLD='\033[1;33m'
 BLUE_BOLD='\033[1;34m'
 NO_COLOR='\e[0m'
 
-## Funções ##
 snap_remove(){
     echo -e "${YELLOW_BOLD}[INFO] - Remove Snap ${NO_COLOR}"
 
@@ -31,7 +29,6 @@ apt_install(){
     apt install gnome-software -y
 }
 
-## Execução do Script ##
 snap_remove
 apt_remove
 apt_install

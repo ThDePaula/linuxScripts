@@ -1,5 +1,4 @@
 #!/bin/bash
-## Variáveis ##
 GREEN_BOLD='\033[1;32m'
 YELLOW_BOLD='\033[1;33m'
 BLUE_BOLD='\033[1;34m'
@@ -13,7 +12,6 @@ DIRETORIO_DOWNLOADS_ISO="$HOME/Downloads/ISO"
 DIRETORIO_PROJECTS="$HOME/Documents/Projects"
 DIRETORIO_CONNECTION="$HOME/Public/Connection"
 
-## Funções ##
 apt_update(){
     echo -e "${BLUE_BOLD}[INFO] - System Update ${NO_COLOR}"
 
@@ -95,9 +93,6 @@ dpkg_reconfig(){
     apt -f install -y
 }
 
-
-
-## Execução do Script ##
 apt_unlocking
 apt_update
 dpkg_reconfig
