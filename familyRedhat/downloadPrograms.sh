@@ -53,7 +53,7 @@ create_folder(){
 }
 
 package_rpm(){
-    echo -e "${BLUE_BOLD}[INFO] - Install Packages .DEB ${NO_COLOR}"
+    echo -e "${BLUE_BOLD}[INFO] - Install Packages .RPM ${NO_COLOR}"
 
     wget -c "$GOOGLE_CHROME_RPM" -P "$DIRETORIO_DOWNLOADS"
     wget -c "$VS_CODE_RPM" -P "$DIRETORIO_DOWNLOADS"
