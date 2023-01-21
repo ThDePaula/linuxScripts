@@ -7,16 +7,16 @@ NO_COLOR='\e[0m'
 dnf_update(){
     echo -e "${BLUE_BOLD}[INFO] - System Update ${NO_COLOR}"
 
-    dnf update -y
-    dnf upgrade -y
+    sudo dnf update -y
+    sudo dnf upgrade -y
     flatpak update -y
 }
 
 dnf_remove(){
     echo -e "${YELLOW_BOLD}[INFO] - Remove Legacy Packages ${NO_COLOR}"
     
-    dnf autoremove -y
-    dnf clean all -y
+    sudo dnf autoremove -y
+    sudo dnf clean all -y
 }
 
 dnf_update
