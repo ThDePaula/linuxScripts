@@ -7,8 +7,8 @@ NO_COLOR='\e[0m'
 pacman_update(){
     echo -e "${BLUE_BOLD}[INFO] - System Update ${NO_COLOR}"
 
-    sudo pacman -Syu
-    sudo pacman -Syy
+    sudo pacman -Syu --noconfirm
+    sudo pacman -Syy --noconfirm
     flatpak update -y
 }
 
