@@ -12,8 +12,8 @@ DIRETORIO_GITHUB="$HOME/Documents/Projects/GitHub/firefox-gnome-theme"
 pacman_update(){
     echo -e "${BLUE_BOLD}[INFO] - System Update ${NO_COLOR}"
 
-    sudo pacman -Syu
-    sudo pacman -Syy
+    sudo pacman -Syu --noconfirm
+    sudo pacman -Syy --noconfirm
 }
 
 pacman_remove(){
