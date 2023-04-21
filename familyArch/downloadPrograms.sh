@@ -24,7 +24,9 @@ pacman_remove(){
 pacman_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages ${NO_COLOR}"
 
+    sudo pacman -S vim --noconfirm
     sudo pacman -S flatpak --noconfirm
+    sudo pacman -S remmina --noconfirm
     sudo pacman -S audacity --noconfirm
     sudo pacman -S gnome-boxes --noconfirm
     sudo pacman -S gnome-characters --noconfirm
@@ -42,6 +44,7 @@ create_folder(){
 flatpak_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages Flatpak ${NO_COLOR}"
     
+    flatpak install flathub com.slack.Slack -y
     flatpak install flathub org.videolan.VLC -y
     flatpak install flathub com.google.Chrome -y
     flatpak install flathub com.spotify.Client -y
