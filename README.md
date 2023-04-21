@@ -7,3 +7,4 @@ Os scripts são baseados nas bases principais, porém, foi testado nas seguintes
 - Ubuntu
 - PopOs
 - Fedora
+- Manjaro
