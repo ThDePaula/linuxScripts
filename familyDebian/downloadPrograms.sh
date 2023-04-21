@@ -11,6 +11,7 @@ DIRETORIO_DOWNLOADS="$HOME/Downloads/Programs"
 DIRETORIO_DOWNLOADS_ISO="$HOME/Downloads/ISO"
 DIRETORIO_PROJECTS="$HOME/Documents/Projects"
 DIRETORIO_CONNECTION="$HOME/Public/Connection"
+DIRETORIO_GITHUB="$HOME/Documents/Projects/GitHub/firefox-gnome-theme"
 
 apt_update(){
     echo -e "${BLUE_BOLD}[INFO] - System Update ${NO_COLOR}"
@@ -53,6 +54,7 @@ create_folder(){
     mkdir "$DIRETORIO_DOWNLOADS_ISO"
     mkdir "$DIRETORIO_PROJECTS"
     mkdir "$DIRETORIO_CONNECTION"
+    mkdir "$DIRETORIO_GITHUB"
 }
 
 package_deb(){
@@ -95,6 +97,13 @@ dpkg_reconfig(){
     sudo apt -f install -y
 }
 
+firefox_theme(){
+    echo -e "${BLUE_BOLD}[INFO] - Apply Firefox Gnome Theme ${NO_COLOR}"
+
+    git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git $DIRETORIO_GITHUB
+    cd "$DIRETORIO_GITHUB" && ./scripts/install.sh
+}
+
 apt_unlocking
 apt_update
 dpkg_reconfig
@@ -109,5 +118,6 @@ package_deb
 
 apt_update
 apt_remove
+firefox_theme
 
 echo -e "${GREEN_BOLD}[INFO] - Finished Execute!!! ${NO_COLOR}"
