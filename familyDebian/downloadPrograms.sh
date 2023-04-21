@@ -31,6 +31,7 @@ apt_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages ${NO_COLOR}"
 
     sudo apt install vim -y
+    sudo apt install docker.io -y
     sudo apt install remmina -y
     sudo apt install flatpak -y
     sudo apt install audacity -y

@@ -32,6 +32,7 @@ dnf_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages ${NO_COLOR}"
 
     sudo dnf install vim -y
+    sudo dnf install docker -y
     sudo dnf install remmina -y
     sudo dnf install flatpak -y
     sudo dnf install audacity -y
