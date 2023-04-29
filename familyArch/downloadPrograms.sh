@@ -29,6 +29,7 @@ pacman_install(){
     sudo pacman -S docker --noconfirm
     sudo pacman -S flatpak --noconfirm
     sudo pacman -S remmina --noconfirm
+    sudo pacman -S freerdp --noconfirm
     sudo pacman -S audacity --noconfirm
     sudo pacman -S webapp-manager --noconfirm
     sudo pacman -S gnome-boxes --noconfirm
