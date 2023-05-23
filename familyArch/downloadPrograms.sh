@@ -35,7 +35,7 @@ pacman_install(){
     sudo pacman -S webapp-manager --noconfirm
     sudo pacman -S gnome-characters --noconfirm
     sudo pacman -S libpamac-flatpak-plugin --noconfirm
-    sudo pacman -S gnome-software-packagekit --noconfirm
+    sudo pacman -S gnome-software-packagekit-plugin --noconfirm
 }
 
 create_folder(){
