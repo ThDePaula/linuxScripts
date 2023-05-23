@@ -25,6 +25,7 @@ pacman_remove(){
 pacman_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages ${NO_COLOR}"
 
+    sudo pacman -S git --noconfirm
     sudo pacman -S vim --noconfirm
     sudo pacman -S flatpak --noconfirm
     sudo pacman -S docker --noconfirm
