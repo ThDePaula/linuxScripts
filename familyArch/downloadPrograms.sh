@@ -26,15 +26,16 @@ pacman_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages ${NO_COLOR}"
 
     sudo pacman -S vim --noconfirm
-    sudo pacman -S docker --noconfirm
     sudo pacman -S flatpak --noconfirm
-    sudo pacman -S remmina --noconfirm
+    sudo pacman -S docker --noconfirm
     sudo pacman -S freerdp --noconfirm
     sudo pacman -S audacity --noconfirm
-    sudo pacman -S webapp-manager --noconfirm
+    sudo pacman -S remmina --noconfirm
     sudo pacman -S gnome-boxes --noconfirm
+    sudo pacman -S webapp-manager --noconfirm
     sudo pacman -S gnome-characters --noconfirm
     sudo pacman -S libpamac-flatpak-plugin --noconfirm
+    sudo pacman -S gnome-software-packagekit --noconfirm
 }
 
 create_folder(){
@@ -51,8 +52,8 @@ flatpak_install(){
     
     flatpak install flathub com.slack.Slack -y
     flatpak install flathub org.videolan.VLC -y
-    flatpak install flathub com.google.Chrome -y
     flatpak install flathub com.spotify.Client -y
+    flatpak install flathub com.google.Chrome -y
     flatpak install flathub org.telegram.desktop -y
     flatpak install flathub com.visualstudio.code -y
     flatpak install flathub com.discordapp.Discord -y
