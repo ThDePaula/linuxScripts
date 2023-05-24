@@ -8,3 +8,4 @@ Os scripts são baseados nas bases principais, porém, foi testado nas seguintes
 - PopOs
 - Fedora
 - Manjaro
+- Arch Linux (_não 100% funcional_)
