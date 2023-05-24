@@ -11,6 +11,7 @@ DIRETORIO_DOWNLOADS="$HOME/Downloads/Programs"
 DIRETORIO_DOWNLOADS_ISO="$HOME/Downloads/ISO"
 DIRETORIO_PROJECTS="$HOME/Documents/Projects"
 DIRETORIO_CONNECTION="$HOME/Public/Connection"
+DIRETORIO_GITHUB="$HOME/Documents/Projects/GitHub/firefox-gnome-theme"
 
 apt_update(){
     echo -e "${BLUE_BOLD}[INFO] - System Update ${NO_COLOR}"
@@ -29,6 +30,9 @@ apt_remove(){
 apt_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages ${NO_COLOR}"
 
+    sudo apt install vim -y
+    sudo apt install docker.io -y
+    sudo apt install remmina -y
     sudo apt install flatpak -y
     sudo apt install audacity -y
     sudo apt install flameshot -y 
@@ -51,6 +55,7 @@ create_folder(){
     mkdir "$DIRETORIO_DOWNLOADS_ISO"
     mkdir "$DIRETORIO_PROJECTS"
     mkdir "$DIRETORIO_CONNECTION"
+    mkdir "$DIRETORIO_GITHUB"
 }
 
 package_deb(){
@@ -65,6 +70,7 @@ package_deb(){
 flatpak_install(){
     echo -e "${BLUE_BOLD}[INFO] - Install Packages Flatpak ${NO_COLOR}"
     
+    flatpak install flathub com.slack.Slack -y
     flatpak install flathub org.videolan.VLC -y
     flatpak install flathub com.spotify.Client -y
     flatpak install flathub org.telegram.desktop -y
@@ -92,6 +98,13 @@ dpkg_reconfig(){
     sudo apt -f install -y
 }
 
+firefox_theme(){
+    echo -e "${BLUE_BOLD}[INFO] - Apply Firefox Gnome Theme ${NO_COLOR}"
+
+    git clone https://github.com/rafaelmardojai/firefox-gnome-theme.git $DIRETORIO_GITHUB
+    cd "$DIRETORIO_GITHUB" && ./scripts/install.sh
+}
+
 apt_unlocking
 apt_update
 dpkg_reconfig
@@ -106,5 +119,6 @@ package_deb
 
 apt_update
 apt_remove
+firefox_theme
 
 echo -e "${GREEN_BOLD}[INFO] - Finished Execute!!! ${NO_COLOR}"
