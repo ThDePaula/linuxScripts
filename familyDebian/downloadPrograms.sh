@@ -73,14 +73,13 @@ flatpak_install(){
     flatpak install flathub com.slack.Slack -y
     flatpak install flathub org.videolan.VLC -y
     flatpak install flathub com.spotify.Client -y
-    flatpak install flathub org.telegram.desktop -y
-    flatpak install flathub com.discordapp.Discord -y
+    flatpak install flathub com.visualstudio.code -y
     flatpak install flathub com.valvesoftware.Steam -y
     flatpak install flathub de.haeckerfelix.Fragments -y
     flatpak install flathub com.heroicgameslauncher.hgl -y
     flatpak install flathub com.mattjakeman.ExtensionManager -y
     flatpak install flathub com.github.unrud.VideoDownloader -y
-    flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y
+    flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y 
 }
 
 apt_unlocking(){
