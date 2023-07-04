@@ -33,10 +33,8 @@ pacman_install(){
     sudo pacman -S audacity --noconfirm
     sudo pacman -S remmina --noconfirm
     sudo pacman -S gnome-boxes --noconfirm
-    sudo pacman -S webapp-manager --noconfirm
     sudo pacman -S gnome-characters --noconfirm
     sudo pacman -S libpamac-flatpak-plugin --noconfirm
-    sudo pacman -S gnome-software-packagekit-plugin --noconfirm
 }
 
 create_folder(){
@@ -55,9 +53,7 @@ flatpak_install(){
     flatpak install flathub org.videolan.VLC -y
     flatpak install flathub com.spotify.Client -y
     flatpak install flathub com.google.Chrome -y
-    flatpak install flathub org.telegram.desktop -y
     flatpak install flathub com.visualstudio.code -y
-    flatpak install flathub com.discordapp.Discord -y
     flatpak install flathub com.valvesoftware.Steam -y
     flatpak install flathub de.haeckerfelix.Fragments -y
     flatpak install flathub com.heroicgameslauncher.hgl -y
