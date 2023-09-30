@@ -59,7 +59,7 @@ flatpak_install(){
     flatpak install flathub com.heroicgameslauncher.hgl -y
     flatpak install flathub com.mattjakeman.ExtensionManager -y
     flatpak install flathub com.github.unrud.VideoDownloader -y
-    flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y 
+    flatpak install flathub io.github.mimbrero.WhatsAppDesktop -y
 }
 
 firefox_theme(){

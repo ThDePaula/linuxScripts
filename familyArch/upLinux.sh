@@ -16,6 +16,7 @@ pacman_remove(){
     echo -e "${YELLOW_BOLD}[INFO] - Remove Legacy Packages ${NO_COLOR}"
 
     sudo pacman -Rs $(pacman -Qtdq) --noconfirm
+    sudo pacman -Sc --noconfirm
 }
 
 pacman_update
