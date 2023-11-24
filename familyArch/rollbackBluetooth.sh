@@ -7,10 +7,10 @@ NO_COLOR='\e[0m'
 pacman_rollback(){
     echo -e "${YELLOW_BOLD}[INFO] - Rollback Started  ${NO_COLOR}"
 
-    sudo pacman -U https://archive.archlinux.org/packages/b/bluez/bluez-5.68-1-x86_64.pkg.tar.zst
-    sudo pacman -U https://archive.archlinux.org/packages/b/bluez-libs/bluez-libs-5.68-1-x86_64.pkg.tar.zst
-    sudo pacman -U https://archive.archlinux.org/packages/b/bluez-plugins/bluez-plugins-5.68-1-x86_64.pkg.tar.zst
-    sudo pacman -U https://archive.archlinux.org/packages/b/bluez-utils/bluez-utils-5.68-1-x86_64.pkg.tar.zst
+    sudo pacman -U https://archive.archlinux.org/packages/b/bluez/bluez-5.68-1-x86_64.pkg.tar.zst --noconfirm
+    sudo pacman -U https://archive.archlinux.org/packages/b/bluez-libs/bluez-libs-5.68-1-x86_64.pkg.tar.zst --noconfirm
+    sudo pacman -U https://archive.archlinux.org/packages/b/bluez-plugins/bluez-plugins-5.68-1-x86_64.pkg.tar.zst --noconfirm
+    sudo pacman -U https://archive.archlinux.org/packages/b/bluez-utils/bluez-utils-5.68-1-x86_64.pkg.tar.zst --noconfirm
 }
 
 bluetooth_restart(){
