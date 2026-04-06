@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 GREEN_BOLD='\033[1;32m'
 YELLOW_BOLD='\033[1;33m'
 BLUE_BOLD='\033[1;34m'
@@ -40,10 +41,10 @@ pacman_install(){
 create_folder(){
     echo -e "${YELLOW_BOLD}[INFO] - Create Folders  ${NO_COLOR}"
 
-    mkdir "$DIRETORIO_DOWNLOADS_ISO"
-    mkdir "$DIRETORIO_PROJECTS"
-    mkdir "$DIRETORIO_CONNECTION"
-    mkdir "$DIRETORIO_GITHUB"
+    mkdir -p "$DIRETORIO_DOWNLOADS_ISO"
+    mkdir -p "$DIRETORIO_PROJECTS"
+    mkdir -p "$DIRETORIO_CONNECTION"
+    mkdir -p "$DIRETORIO_GITHUB"
 }
 
 flatpak_install(){
